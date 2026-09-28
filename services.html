@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Yarta | Travel Services</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* PAGE HERO */
+
+        .page-hero {
+            min-height: 55vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 120px 7% 70px;
+
+            background:
+                linear-gradient(
+                    rgba(5, 20, 17, .78),
+                    rgba(5, 20, 17, .78)
+                ),
+                url("images/bali.jpg");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .page-hero h1 {
+            font-size: clamp(50px, 8vw, 90px);
+
+            line-height: .95;
+
+            letter-spacing: -4px;
+
+            margin-top: 15px;
+        }
+
+        .page-hero h1 span {
+            color: #b7f35b;
+            font-style: italic;
+        }
+
+        .page-hero p {
+            max-width: 600px;
+
+            margin: 25px auto 0;
+
+            color: #c4cfca;
+
+            line-height: 1.8;
+
+            font-size: 15px;
+        }
+
+
+        /* SERVICES */
+
+        .services-page {
+            padding: 120px 7%;
+
+            background: #101413;
+        }
+
+        .services-title {
+            text-align: center;
+
+            max-width: 650px;
+
+            margin: 0 auto 60px;
+        }
+
+        .services-title span {
+            color: #b7f35b;
+
+            font-size: 11px;
+
+            letter-spacing: 3px;
+        }
+
+        .services-title h2 {
+            font-size: clamp(40px, 6vw, 65px);
+
+            letter-spacing: -3px;
+
+            margin: 15px 0;
+        }
+
+        .services-title h2 strong {
+            color: #b7f35b;
+
+            font-style: italic;
+        }
+
+        .services-title p {
+            color: #899590;
+
+            line-height: 1.8;
+        }
+
+
+        /* SERVICE GRID */
+
+        .service-grid {
+            max-width: 1200px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+
+        /* SERVICE CARD */
+
+        .service-card {
+            min-height: 300px;
+
+            padding: 35px;
+
+            background: #171c1a;
+
+            border:
+                1px solid #28312d;
+
+            position: relative;
+
+            overflow: hidden;
+
+            transition: .4s;
+
+            animation: serviceAppear .8s ease both;
+        }
+
+        .service-card:nth-child(2) {
+            animation-delay: .15s;
+        }
+
+        .service-card:nth-child(3) {
+            animation-delay: .3s;
+        }
+
+        .service-card:nth-child(4) {
+            animation-delay: .45s;
+        }
+
+        .service-card:nth-child(5) {
+            animation-delay: .6s;
+        }
+
+        .service-card:nth-child(6) {
+            animation-delay: .75s;
+        }
+
+
+        .service-card::before {
+            content: "";
+
+            position: absolute;
+
+            width: 150px;
+            height: 150px;
+
+            border-radius: 50%;
+
+            background: #b7f35b;
+
+            opacity: 0;
+
+            right: -80px;
+            top: -80px;
+
+            transition: .5s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+
+            border-color: #b7f35b;
+
+            box-shadow:
+                0 20px 50px
+                rgba(0,0,0,.3);
+        }
+
+        .service-card:hover::before {
+            opacity: .12;
+        }
+
+
+        /* ICON */
+
+        .service-icon {
+            width: 65px;
+            height: 65px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 15px;
+
+            background: #232c28;
+
+            color: #b7f35b;
+
+            font-size: 28px;
+
+            margin-bottom: 30px;
+
+            transition: .4s;
+        }
+
+        .service-card:hover .service-icon {
+            background: #b7f35b;
+
+            color: #101413;
+
+            transform:
+                rotate(-8deg)
+                scale(1.08);
+        }
+
+
+        /* CARD TEXT */
+
+        .service-card h3 {
+            font-size: 23px;
+
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: #899590;
+
+            font-size: 13px;
+
+            line-height: 1.8;
+        }
+
+
+        /* CARD NUMBER */
+
+        .service-number {
+            position: absolute;
+
+            right: 25px;
+            bottom: 20px;
+
+            color: #303b36;
+
+            font-size: 45px;
+
+            font-weight: bold;
+
+            transition: .3s;
+        }
+
+        .service-card:hover .service-number {
+            color: #425044;
+        }
+
+
+        /* CTA */
+
+        .service-cta {
+            max-width: 1100px;
+
+            margin: 80px auto 0;
+
+            padding: 60px 40px;
+
+            text-align: center;
+
+            border:
+                1px solid #354039;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #18201d,
+                    #101413
+                );
+        }
+
+        .service-cta h2 {
+            font-size: 38px;
+
+            margin-bottom: 15px;
+        }
+
+        .service-cta h2 span {
+            color: #b7f35b;
+        }
+
+        .service-cta p {
+            color: #899590;
+
+            margin-bottom: 25px;
+        }
+
+        .service-button {
+            display: inline-block;
+
+            padding: 15px 25px;
+
+            border-radius: 30px;
+
+            background: #b7f35b;
+
+            color: #101413;
+
+            font-size: 13px;
+
+            font-weight: bold;
+
+            transition: .4s;
+        }
+
+        .service-button:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 15px 35px
+                rgba(183,243,91,.2);
+        }
+
+
+        /* ANIMATION */
+
+        @keyframes serviceAppear {
+
+            from {
+                opacity: 0;
+
+                transform:
+                    translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+
+                transform:
+                    translateY(0);
+            }
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 850px) {
+
+            .service-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-page {
+                padding: 90px 6%;
+            }
+
+            .service-card {
+                min-height: 280px;
+            }
+
+            .service-cta {
+                padding: 45px 20px;
+            }
+
+            .service-cta h2 {
+                font-size: 30px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header>
+
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+            YAR<span>TA</span>
+        </a>
+
+
+        <ul class="nav-menu">
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="destinations.html">
+                    Places
+                </a>
+            </li>
+
+            <li>
+                <a href="services.html">
+                    Services
+                </a>
+            </li>
+
+            <li>
+                <a href="about.html">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="contact.html">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+
+        <a href="contact.html" class="nav-contact">
+            Let's Travel
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- ================= PAGE HERO ================= -->
+
+<section class="page-hero">
+
+    <div>
+
+        <span class="hero-small">
+            ✦ TRAVEL WITH YARTA
+        </span>
+
+        <h1>
+            Our
+            <span>Services.</span>
+        </h1>
+
+        <p>
+            Everything you need to make your journey comfortable,
+            exciting and completely unforgettable.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= SERVICES ================= -->
+
+<section class="services-page">
+
+
+    <div class="services-title">
+
+        <span>
+            WHAT WE OFFER
+        </span>
+
+        <h2>
+            Travel made
+            <strong>simple.</strong>
+        </h2>
+
+        <p>
+            From booking your flight to planning your complete
+            adventure, Yarta is here to help.
+        </p>
+
+    </div>
+
+
+
+    <div class="service-grid">
+
+
+        <!-- SERVICE 1 -->
+
+        <article class="service-card">
+
+            <div class="service-icon">
+                ✈️
+            </div>
+
+            <h3>
+                Flight Booking
+            </h3>
+
+            <p>
+                Find comfortable and convenient flights
+                for your next adventure.
+            </p>
+
+            <span class="service-number">
+                01
+            </span>
+
+        </article>
+
+
+
+        <!-- SERVICE 2 -->
+
+        <article class="service-card">
+
+            <div class="service-icon">
+                🏨
+            </div>
+
+            <h3>
+                Hotel Booking
+            </h3>
+
+            <p>
+                Discover beautiful hotels, resorts and
+                stays at your favorite destinations.
+            </p>
+
+            <span class="service-number">
+                02
+            </span>
+
+        </article>
+
+
+
+        <!-- SERVICE 3 -->
+
+        <article class="service-card">
+
+            <div class="service-icon">
+                🗺️
+            </div>
+
+            <h3>
+                Tour Packages
+            </h3>
+
+            <p>
+                Explore carefully planned tour packages
+                designed for unforgettable experiences.
+            </p>
+
+            <span class="service-number">
+                03
+            </span>
+
+        </article>
+
+
+
+        <!-- SERVICE 4 -->
+
+        <article class="service-card">
+
+            <div class="service-icon">
+                🚗
+            </div>
+
+            <h3>
+                Transportation
+            </h3>
+
+            <p>
+                Enjoy reliable transportation and
+                comfortable travel throughout your trip.
+            </p>
+
+            <span class="service-number">
+                04
+            </span>
+
+        </article>
+
+
+
+        <!-- SERVICE 5 -->
+
+        <article class="service-card">
+
+            <div class="service-icon">
+                🎒
+            </div>
+
+            <h3>
+                Travel Planning
+            </h3>
+
+            <p>
+                Get help creating an itinerary that
+                matches your interests and travel style.
+            </p>
+
+            <span class="service-number">
+                05
+            </span>
+
+        </article>
+
+
+
+        <!-- SERVICE 6 -->
+
+        <article class="service-card">
+
+            <div class="service-icon">
+                🌎
+            </div>
+
+            <h3>
+                Travel Support
+            </h3>
+
+            <p>
+                We're here to help you throughout
+                your journey whenever you need us.
+            </p>
+
+            <span class="service-number">
+                06
+            </span>
+
+        </article>
+
+
+    </div>
+
+
+
+    <!-- CTA -->
+
+    <div class="service-cta">
+
+        <h2>
+            Ready to start your
+            <span>journey?</span>
+        </h2>
+
+        <p>
+            Let Yarta help you plan your next adventure.
+        </p>
+
+        <a href="contact.html" class="service-button">
+            Plan My Trip →
+        </a>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-top">
+
+        <div class="footer-logo">
+            YAR<span>TA</span>
+        </div>
+
+        <p>
+            Travel far. Live fully.
+        </p>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 Yarta Travel & Tourism
+        </span>
+
+        <div>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="destinations.html">
+                Places
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+</body>
+</html>
