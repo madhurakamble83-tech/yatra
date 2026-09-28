@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Yarta | Bali</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* =========================
+           DESTINATION HERO
+        ========================= */
+
+        .destination-hero {
+
+            min-height: 85vh;
+
+            position: relative;
+
+            display: flex;
+
+            align-items: flex-end;
+
+            padding: 100px 8%;
+
+            background:
+                linear-gradient(
+                    transparent 20%,
+                    rgba(5,15,13,.9)
+                ),
+                url("images/bali.jpg");
+
+            background-size: cover;
+
+            background-position: center;
+
+            overflow: hidden;
+
+        }
+
+
+        .destination-hero-content {
+
+            max-width: 850px;
+
+            animation:
+                destinationAppear 1s ease;
+
+        }
+
+
+        .destination-hero-content > span {
+
+            color: #b7f35b;
+
+            font-size: 11px;
+
+            letter-spacing: 3px;
+
+        }
+
+
+        .destination-hero h1 {
+
+            font-size:
+                clamp(65px,10vw,120px);
+
+            line-height: .85;
+
+            letter-spacing: -6px;
+
+            margin: 18px 0;
+
+        }
+
+
+        .destination-hero h1 em {
+
+            color: #b7f35b;
+
+            font-weight: normal;
+
+        }
+
+
+        .destination-hero p {
+
+            max-width: 550px;
+
+            color: #c4ceca;
+
+            line-height: 1.8;
+
+            font-size: 15px;
+
+        }
+
+
+        /* =========================
+           INTRO
+        ========================= */
+
+        .bali-intro {
+
+            padding: 110px 8%;
+
+            background: #101413;
+
+        }
+
+
+        .bali-intro-container {
+
+            max-width: 1150px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                1.2fr .8fr;
+
+            gap: 80px;
+
+            align-items: center;
+
+        }
+
+
+        .bali-intro h2 {
+
+            font-size:
+                clamp(40px,6vw,70px);
+
+            line-height: .95;
+
+            letter-spacing: -4px;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .bali-intro h2 span {
+
+            color: #b7f35b;
+
+            font-style: italic;
+
+        }
+
+
+        .bali-intro p {
+
+            color: #899590;
+
+            font-size: 14px;
+
+            line-height: 1.9;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .location-box {
+
+            padding: 40px;
+
+            border: 1px solid #2d3833;
+
+            background: #171c1a;
+
+        }
+
+
+        .location-box span {
+
+            color: #b7f35b;
+
+            font-size: 10px;
+
+            letter-spacing: 2px;
+
+        }
+
+
+        .location-box h3 {
+
+            font-size: 35px;
+
+            margin: 15px 0;
+
+        }
+
+
+        .location-box p {
+
+            margin: 0;
+
+        }
+
+
+        /* =========================
+           HIGHLIGHTS
+        ========================= */
+
+        .highlights {
+
+            padding: 110px 8%;
+
+            background: #eaf2ed;
+
+            color: #111b18;
+
+        }
+
+
+        .highlights-title {
+
+            max-width: 1150px;
+
+            margin: auto auto 50px;
+
+        }
+
+
+        .highlights-title > span {
+
+            color: #688171;
+
+            font-size: 10px;
+
+            letter-spacing: 3px;
+
+        }
+
+
+        .highlights-title h2 {
+
+            font-size:
+                clamp(40px,6vw,65px);
+
+            line-height: .95;
+
+            letter-spacing: -4px;
+
+            margin-top: 15px;
+
+        }
+
+
+        .highlights-title h2 em {
+
+            color: #7ea73f;
+
+            font-weight: normal;
+
+        }
+
+
+        .highlight-grid {
+
+            max-width: 1150px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3,1fr);
+
+            gap: 20px;
+
+        }
+
+
+        .highlight-card {
+
+            background: #f7faf8;
+
+            padding: 35px;
+
+            min-height: 230px;
+
+            border: 1px solid #d2ddd6;
+
+            transition: .4s;
+
+        }
+
+
+        .highlight-card:hover {
+
+            transform:
+                translateY(-10px);
+
+            box-shadow:
+                0 20px 40px
+                rgba(20,40,30,.1);
+
+        }
+
+
+        .highlight-icon {
+
+            font-size: 32px;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .highlight-card h3 {
+
+            font-size: 22px;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .highlight-card p {
+
+            color: #69776f;
+
+            font-size: 13px;
+
+            line-height: 1.8;
+
+        }
+
+
+        /* =========================
+           TRAVEL INFO
+        ========================= */
+
+        .travel-info {
+
+            padding: 110px 8%;
+
+            background: #101413;
+
+        }
+
+
+        .travel-info-container {
+
+            max-width: 1150px;
+
+            margin: auto;
+
+        }
+
+
+        .travel-info-title {
+
+            margin-bottom: 50px;
+
+        }
+
+
+        .travel-info-title span {
+
+            color: #b7f35b;
+
+            font-size: 10px;
+
+            letter-spacing: 3px;
+
+        }
+
+
+        .travel-info-title h2 {
+
+            font-size: 55px;
+
+            letter-spacing: -3px;
+
+            margin-top: 12px;
+
+        }
+
+
+        .info-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4,1fr);
+
+            border:
+                1px solid #2c3732;
+
+        }
+
+
+        .travel-box {
+
+            padding: 30px;
+
+            border-right:
+                1px solid #2c3732;
+
+        }
+
+
+        .travel-box:last-child {
+
+            border-right: none;
+
+        }
+
+
+        .travel-box span {
+
+            display: block;
+
+            color: #75817b;
+
+            font-size: 9px;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .travel-box strong {
+
+            color: white;
+
+            font-size: 16px;
+
+        }
+
+
+        /* =========================
+           CTA
+        ========================= */
+
+        .destination-cta {
+
+            padding: 120px 7%;
+
+            text-align: center;
+
+            background: #171c1a;
+
+        }
+
+
+        .destination-cta span {
+
+            color: #b7f35b;
+
+            font-size: 10px;
+
+            letter-spacing: 3px;
+
+        }
+
+
+        .destination-cta h2 {
+
+            font-size:
+                clamp(45px,7vw,80px);
+
+            line-height: .9;
+
+            letter-spacing: -5px;
+
+            margin: 20px 0 35px;
+
+        }
+
+
+        .destination-cta h2 em {
+
+            color: #b7f35b;
+
+            font-weight: normal;
+
+        }
+
+
+        .book-button {
+
+            display: inline-block;
+
+            padding: 16px 28px;
+
+            border-radius: 30px;
+
+            background: #b7f35b;
+
+            color: #101413;
+
+            font-size: 12px;
+
+            font-weight: bold;
+
+            transition: .4s;
+
+        }
+
+
+        .book-button:hover {
+
+            transform:
+                translateY(-5px);
+
+            box-shadow:
+                0 15px 35px
+                rgba(183,243,91,.2);
+
+        }
+
+
+        /* =========================
+           ANIMATION
+        ========================= */
+
+        @keyframes destinationAppear {
+
+            from {
+
+                opacity: 0;
+
+                transform:
+                    translateY(50px);
+
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform:
+                    translateY(0);
+
+            }
+
+        }
+
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 850px) {
+
+            .bali-intro-container {
+
+                grid-template-columns: 1fr;
+
+                gap: 45px;
+
+            }
+
+
+            .highlight-grid {
+
+                grid-template-columns:
+                    1fr 1fr;
+
+            }
+
+
+            .info-grid {
+
+                grid-template-columns:
+                    1fr 1fr;
+
+            }
+
+
+            .travel-box:nth-child(2) {
+
+                border-right: none;
+
+            }
+
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            .destination-hero {
+
+                min-height: 75vh;
+
+                padding:
+                    100px 7% 70px;
+
+            }
+
+
+            .destination-hero h1 {
+
+                font-size: 65px;
+
+                letter-spacing: -4px;
+
+            }
+
+
+            .bali-intro {
+
+                padding: 80px 7%;
+
+            }
+
+
+            .bali-intro h2 {
+
+                font-size: 45px;
+
+                letter-spacing: -2px;
+
+            }
+
+
+            .highlights {
+
+                padding: 80px 7%;
+
+            }
+
+
+            .highlight-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .travel-info {
+
+                padding: 80px 7%;
+
+            }
+
+
+            .travel-info-title h2 {
+
+                font-size: 45px;
+
+            }
+
+
+            .info-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .travel-box {
+
+                border-right: none;
+
+                border-bottom:
+                    1px solid #2c3732;
+
+            }
+
+
+            .travel-box:last-child {
+
+                border-bottom: none;
+
+            }
+
+
+            .destination-cta {
+
+                padding: 90px 7%;
+
+            }
+
+
+            .destination-cta h2 {
+
+                font-size: 50px;
+
+                letter-spacing: -3px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<header>
+
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+            YAR<span>TA</span>
+        </a>
+
+
+        <ul class="nav-menu">
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="destinations.html">
+                    Places
+                </a>
+            </li>
+
+            <li>
+                <a href="services.html">
+                    Services
+                </a>
+            </li>
+
+            <li>
+                <a href="about.html">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="contact.html">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+
+        <a href="contact.html"
+           class="nav-contact">
+
+            Let's Travel
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="destination-hero">
+
+    <div class="destination-hero-content">
+
+        <span>
+            INDONESIA — ASIA
+        </span>
+
+        <h1>
+            Hello,
+            <em>Bali.</em>
+        </h1>
+
+        <p>
+            Discover tropical beaches, ancient temples,
+            green rice terraces and unforgettable sunsets
+            on the Island of the Gods.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     INTRO
+========================= -->
+
+<section class="bali-intro">
+
+    <div class="bali-intro-container">
+
+
+        <div>
+
+            <h2>
+                An island
+                <span>like no other.</span>
+            </h2>
+
+            <p>
+                Bali combines natural beauty, rich culture
+                and unforgettable experiences in one
+                incredible destination.
+            </p>
+
+            <p>
+                From peaceful mornings surrounded by rice
+                fields to evenings beside the ocean, every
+                part of Bali offers something different.
+            </p>
+
+        </div>
+
+
+        <div class="location-box">
+
+            <span>
+                DESTINATION
+            </span>
+
+            <h3>
+                Bali, Indonesia
+            </h3>
+
+            <p>
+                A tropical island famous for its beaches,
+                temples, culture and natural landscapes.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     HIGHLIGHTS
+========================= -->
+
+<section class="highlights">
+
+    <div class="highlights-title">
+
+        <span>
+            01 — EXPERIENCE BALI
+        </span>
+
+        <h2>
+            Things to
+            <em>discover.</em>
+        </h2>
+
+    </div>
+
+
+    <div class="highlight-grid">
+
+
+        <article class="highlight-card">
+
+            <div class="highlight-icon">
+                🌴
+            </div>
+
+            <h3>
+                Tropical Beaches
+            </h3>
+
+            <p>
+                Relax beside beautiful beaches and enjoy
+                Bali's tropical coastline.
+            </p>
+
+        </article>
+
+
+        <article class="highlight-card">
+
+            <div class="highlight-icon">
+                🛕
+            </div>
+
+            <h3>
+                Ancient Temples
+            </h3>
+
+            <p>
+                Explore beautiful temples and experience
+                Bali's unique cultural traditions.
+            </p>
+
+        </article>
+
+
+        <article class="highlight-card">
+
+            <div class="highlight-icon">
+                🌾
+            </div>
+
+            <h3>
+                Rice Terraces
+            </h3>
+
+            <p>
+                Walk through spectacular green rice terraces
+                surrounded by tropical landscapes.
+            </p>
+
+        </article>
+
+
+        <article class="highlight-card">
+
+            <div class="highlight-icon">
+                🌅
+            </div>
+
+            <h3>
+                Amazing Sunsets
+            </h3>
+
+            <p>
+                Watch the sun disappear over the ocean
+                and capture unforgettable moments.
+            </p>
+
+        </article>
+
+
+        <article class="highlight-card">
+
+            <div class="highlight-icon">
+                🏄
+            </div>
+
+            <h3>
+                Adventure
+            </h3>
+
+            <p>
+                Discover surfing, hiking and exciting
+                outdoor activities.
+            </p>
+
+        </article>
+
+
+        <article class="highlight-card">
+
+            <div class="highlight-icon">
+                🍜
+            </div>
+
+            <h3>
+                Local Food
+            </h3>
+
+            <p>
+                Experience delicious Indonesian food
+                and local flavors.
+            </p>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     TRAVEL INFORMATION
+========================= -->
+
+<section class="travel-info">
+
+    <div class="travel-info-container">
+
+        <div class="travel-info-title">
+
+            <span>
+                02 — TRAVEL INFORMATION
+            </span>
+
+            <h2>
+                Know before
+                <em>you go.</em>
+            </h2>
+
+        </div>
+
+
+        <div class="info-grid">
+
+
+            <div class="travel-box">
+
+                <span>
+                    DESTINATION
+                </span>
+
+                <strong>
+                    Bali, Indonesia
+                </strong>
+
+            </div>
+
+
+            <div class="travel-box">
+
+                <span>
+                    REGION
+                </span>
+
+                <strong>
+                    Southeast Asia
+                </strong>
+
+            </div>
+
+
+            <div class="travel-box">
+
+                <span>
+                    EXPERIENCE
+                </span>
+
+                <strong>
+                    Nature & Culture
+                </strong>
+
+            </div>
+
+
+            <div class="travel-box">
+
+                <span>
+                    IDEAL FOR
+                </span>
+
+                <strong>
+                    Adventure & Relaxation
+                </strong>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CTA
+========================= -->
+
+<section class="destination-cta">
+
+    <span>
+        READY TO EXPLORE?
+    </span>
+
+    <h2>
+        Your Bali
+        <em>story starts here.</em>
+    </h2>
+
+    <a
+        href="contact.html"
+        class="book-button"
+    >
+        Plan My Bali Trip →
+    </a>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="footer-top">
+
+        <div class="footer-logo">
+            YAR<span>TA</span>
+        </div>
+
+        <p>
+            Travel far. Live fully.
+        </p>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 Yarta Travel & Tourism
+        </span>
+
+        <div>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="destinations.html">
+                Places
+            </a>
+
+            <a href="services.html">
+                Services
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>
