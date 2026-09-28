@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Yarta | About Us</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* ==============================
+           PAGE HERO
+        ============================== */
+
+        .about-hero {
+
+            min-height: 55vh;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 120px 7% 70px;
+
+            background:
+                linear-gradient(
+                    rgba(5,20,17,.78),
+                    rgba(5,20,17,.78)
+                ),
+                url("images/paris.jpg");
+
+            background-size: cover;
+
+            background-position: center;
+
+            overflow: hidden;
+        }
+
+
+        .about-hero-content {
+
+            animation:
+                aboutHero 1s ease;
+        }
+
+
+        .about-hero span {
+
+            color: #b7f35b;
+
+            font-size: 11px;
+
+            letter-spacing: 3px;
+        }
+
+
+        .about-hero h1 {
+
+            font-size:
+                clamp(50px,8vw,90px);
+
+            line-height: .95;
+
+            letter-spacing: -5px;
+
+            margin: 18px 0;
+        }
+
+
+        .about-hero h1 em {
+
+            color: #b7f35b;
+
+            font-weight: normal;
+        }
+
+
+        .about-hero p {
+
+            max-width: 600px;
+
+            margin: auto;
+
+            color: #bdc9c4;
+
+            font-size: 15px;
+
+            line-height: 1.8;
+        }
+
+
+        /* ==============================
+           STORY
+        ============================== */
+
+        .about-story {
+
+            max-width: 1200px;
+
+            margin: auto;
+
+            padding: 120px 7%;
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 80px;
+
+            align-items: center;
+        }
+
+
+        .story-image {
+
+            height: 550px;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+
+        .story-image img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: .8s;
+        }
+
+
+        .story-image:hover img {
+
+            transform:
+                scale(1.08);
+        }
+
+
+        .story-badge {
+
+            position: absolute;
+
+            right: 20px;
+
+            bottom: 20px;
+
+            background: #b7f35b;
+
+            color: #101413;
+
+            padding: 18px 22px;
+
+            font-weight: bold;
+
+            font-size: 12px;
+
+            letter-spacing: 1px;
+        }
+
+
+        .story-content > span {
+
+            color: #b7f35b;
+
+            font-size: 11px;
+
+            letter-spacing: 3px;
+        }
+
+
+        .story-content h2 {
+
+            font-size:
+                clamp(40px,5vw,65px);
+
+            line-height: .98;
+
+            letter-spacing: -4px;
+
+            margin: 20px 0 30px;
+        }
+
+
+        .story-content h2 em {
+
+            color: #b7f35b;
+
+            font-weight: normal;
+        }
+
+
+        .story-content p {
+
+            color: #8d9994;
+
+            line-height: 1.9;
+
+            font-size: 14px;
+
+            margin-bottom: 17px;
+
+            max-width: 520px;
+        }
+
+
+        /* ==============================
+           STATS
+        ============================== */
+
+        .about-stats {
+
+            padding: 80px 7%;
+
+            background: #eaf2ed;
+
+            color: #111b18;
+        }
+
+
+        .stats-container {
+
+            max-width: 1100px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4,1fr);
+
+            gap: 30px;
+
+            text-align: center;
+        }
+
+
+        .stat {
+
+            padding: 20px;
+
+            border-right:
+                1px solid #cbd7cf;
+        }
+
+
+        .stat:last-child {
+
+            border-right: none;
+        }
+
+
+        .stat strong {
+
+            display: block;
+
+            font-size: 42px;
+
+            color: #111b18;
+
+            margin-bottom: 7px;
+        }
+
+
+        .stat strong span {
+
+            color: #86bd37;
+        }
+
+
+        .stat p {
+
+            color: #65736b;
+
+            font-size: 12px;
+
+            letter-spacing: 1px;
+        }
+
+
+        /* ==============================
+           VALUES
+        ============================== */
+
+        .values {
+
+            padding: 120px 7%;
+
+            background: #101413;
+        }
+
+
+        .values-heading {
+
+            max-width: 1200px;
+
+            margin: auto auto 55px;
+        }
+
+
+        .values-heading span {
+
+            color: #b7f35b;
+
+            font-size: 11px;
+
+            letter-spacing: 3px;
+        }
+
+
+        .values-heading h2 {
+
+            font-size:
+                clamp(40px,6vw,70px);
+
+            line-height: .95;
+
+            letter-spacing: -4px;
+
+            margin-top: 15px;
+        }
+
+
+        .values-heading h2 em {
+
+            color: #b7f35b;
+
+            font-weight: normal;
+        }
+
+
+        .values-grid {
+
+            max-width: 1200px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3,1fr);
+
+            gap: 20px;
+        }
+
+
+        .value-card {
+
+            padding: 40px 30px;
+
+            min-height: 270px;
+
+            background: #171c1a;
+
+            border:
+                1px solid #29332f;
+
+            transition: .4s;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+
+        .value-card:hover {
+
+            transform:
+                translateY(-10px);
+
+            border-color:
+                #b7f35b;
+        }
+
+
+        .value-icon {
+
+            width: 60px;
+
+            height: 60px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background: #242d29;
+
+            border-radius: 50%;
+
+            color: #b7f35b;
+
+            font-size: 25px;
+
+            margin-bottom: 25px;
+
+            transition: .4s;
+        }
+
+
+        .value-card:hover
+        .value-icon {
+
+            background: #b7f35b;
+
+            color: #101413;
+
+            transform:
+                rotate(10deg);
+        }
+
+
+        .value-card h3 {
+
+            font-size: 22px;
+
+            margin-bottom: 12px;
+        }
+
+
+        .value-card p {
+
+            color: #899590;
+
+            font-size: 13px;
+
+            line-height: 1.8;
+        }
+
+
+        /* ==============================
+           MISSION
+        ============================== */
+
+        .mission {
+
+            padding: 120px 7%;
+
+            background: #eaf2ed;
+
+            color: #111b18;
+
+            text-align: center;
+        }
+
+
+        .mission-content {
+
+            max-width: 850px;
+
+            margin: auto;
+        }
+
+
+        .mission-content > span {
+
+            color: #6a8373;
+
+            font-size: 11px;
+
+            letter-spacing: 3px;
+        }
+
+
+        .mission h2 {
+
+            font-size:
+                clamp(40px,6vw,70px);
+
+            line-height: 1;
+
+            letter-spacing: -4px;
+
+            margin: 20px 0 25px;
+        }
+
+
+        .mission h2 em {
+
+            color: #78a936;
+
+            font-weight: normal;
+        }
+
+
+        .mission p {
+
+            max-width: 650px;
+
+            margin: auto;
+
+            color: #68756e;
+
+            line-height: 1.9;
+
+            font-size: 15px;
+        }
+
+
+        /* ==============================
+           ANIMATION
+        ============================== */
+
+        @keyframes aboutHero {
+
+            from {
+
+                opacity: 0;
+
+                transform:
+                    translateY(45px);
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform:
+                    translateY(0);
+            }
+        }
+
+
+        /* ==============================
+           TABLET
+        ============================== */
+
+        @media (max-width: 850px) {
+
+            .about-story {
+
+                grid-template-columns: 1fr;
+
+                gap: 50px;
+            }
+
+
+            .stats-container {
+
+                grid-template-columns:
+                    repeat(2,1fr);
+            }
+
+
+            .stat:nth-child(2) {
+
+                border-right: none;
+            }
+
+
+            .values-grid {
+
+                grid-template-columns:
+                    1fr 1fr;
+            }
+
+        }
+
+
+        /* ==============================
+           MOBILE
+        ============================== */
+
+        @media (max-width: 600px) {
+
+            .about-hero h1 {
+
+                font-size: 55px;
+
+                letter-spacing: -3px;
+            }
+
+
+            .about-story {
+
+                padding: 90px 6%;
+            }
+
+
+            .story-image {
+
+                height: 400px;
+            }
+
+
+            .story-content h2 {
+
+                font-size: 45px;
+
+                letter-spacing: -2px;
+            }
+
+
+            .about-stats {
+
+                padding: 60px 6%;
+            }
+
+
+            .stats-container {
+
+                grid-template-columns: 1fr 1fr;
+
+                gap: 10px;
+            }
+
+
+            .stat {
+
+                border-right: none;
+
+                border-bottom:
+                    1px solid #cbd7cf;
+
+                padding: 25px 10px;
+            }
+
+
+            .stat strong {
+
+                font-size: 32px;
+            }
+
+
+            .values {
+
+                padding: 90px 6%;
+            }
+
+
+            .values-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .mission {
+
+                padding: 90px 6%;
+            }
+
+
+            .mission h2 {
+
+                font-size: 45px;
+
+                letter-spacing: -2px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- ==============================
+     NAVBAR
+============================== -->
+
+<header>
+
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+            YAR<span>TA</span>
+        </a>
+
+
+        <ul class="nav-menu">
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="destinations.html">
+                    Places
+                </a>
+            </li>
+
+            <li>
+                <a href="services.html">
+                    Services
+                </a>
+            </li>
+
+            <li>
+                <a href="about.html">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="contact.html">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+
+        <a href="contact.html" class="nav-contact">
+            Let's Travel
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- ==============================
+     HERO
+============================== -->
+
+<section class="about-hero">
+
+    <div class="about-hero-content">
+
+        <span>
+            ✦ THE YARTA STORY
+        </span>
+
+        <h1>
+            We believe
+            <br>
+            in <em>journeys.</em>
+        </h1>
+
+        <p>
+            Yarta was created for people who believe that
+            traveling is one of the best ways to experience life.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==============================
+     STORY
+============================== -->
+
+<section class="about-story">
+
+
+    <div class="story-image">
+
+        <img
+            src="images/switzerland.jpg"
+            alt="Beautiful mountain destination"
+        >
+
+        <div class="story-badge">
+            EST. 2016
+        </div>
+
+    </div>
+
+
+
+    <div class="story-content">
+
+        <span>
+            01 — OUR STORY
+        </span>
+
+        <h2>
+            More than a
+            <em>travel company.</em>
+        </h2>
+
+        <p>
+            Yarta started with one simple idea:
+            travel should feel exciting, personal and easy.
+        </p>
+
+        <p>
+            We wanted to create a place where travelers could
+            discover incredible destinations and plan journeys
+            that match the way they want to explore the world.
+        </p>
+
+        <p>
+            Today, Yarta connects travelers with experiences
+            across the globe — from peaceful beaches and
+            beautiful cities to breathtaking mountains.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==============================
+     STATS
+============================== -->
+
+<section class="about-stats">
+
+    <div class="stats-container">
+
+        <div class="stat">
+
+            <strong>
+                120<span>+</span>
+            </strong>
+
+            <p>
+                DESTINATIONS
+            </p>
+
+        </div>
+
+
+        <div class="stat">
+
+            <strong>
+                50K<span>+</span>
+            </strong>
+
+            <p>
+                HAPPY TRAVELERS
+            </p>
+
+        </div>
+
+
+        <div class="stat">
+
+            <strong>
+                10<span>+</span>
+            </strong>
+
+            <p>
+                YEARS EXPERIENCE
+            </p>
+
+        </div>
+
+
+        <div class="stat">
+
+            <strong>
+                4.9<span>★</span>
+            </strong>
+
+            <p>
+                AVERAGE RATING
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==============================
+     VALUES
+============================== -->
+
+<section class="values">
+
+    <div class="values-heading">
+
+        <span>
+            02 — WHAT WE BELIEVE
+        </span>
+
+        <h2>
+            Our values
+            <em>guide us.</em>
+        </h2>
+
+    </div>
+
+
+    <div class="values-grid">
+
+
+        <article class="value-card">
+
+            <div class="value-icon">
+                🌎
+            </div>
+
+            <h3>
+                Explore
+            </h3>
+
+            <p>
+                We believe there is always somewhere new
+                to discover and something new to experience.
+            </p>
+
+        </article>
+
+
+        <article class="value-card">
+
+            <div class="value-icon">
+                ❤️
+            </div>
+
+            <h3>
+                Connect
+            </h3>
+
+            <p>
+                Travel brings people together and creates
+                memories that last far beyond the journey.
+            </p>
+
+        </article>
+
+
+        <article class="value-card">
+
+            <div class="value-icon">
+                ✨
+            </div>
+
+            <h3>
+                Inspire
+            </h3>
+
+            <p>
+                We want every journey to inspire curiosity,
+                confidence and a love for discovering the world.
+            </p>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ==============================
+     MISSION
+============================== -->
+
+<section class="mission">
+
+    <div class="mission-content">
+
+        <span>
+            03 — OUR MISSION
+        </span>
+
+        <h2>
+            Make every
+            <em>journey count.</em>
+        </h2>
+
+        <p>
+            Our mission is simple: help people discover the
+            world, experience new cultures and create stories
+            they will remember for years to come.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==============================
+     FOOTER
+============================== -->
+
+<footer>
+
+    <div class="footer-top">
+
+        <div class="footer-logo">
+            YAR<span>TA</span>
+        </div>
+
+        <p>
+            Travel far. Live fully.
+        </p>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 Yarta Travel & Tourism
+        </span>
+
+        <div>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="destinations.html">
+                Places
+            </a>
+
+            <a href="services.html">
+                Services
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+</body>
+</html>
