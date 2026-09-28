@@ -4,272 +4,546 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Yarta | Travel & Tourism</title>
+    <title>Yarta | Travel Beyond Dreams</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Navigation Bar -->
-    <header>
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="header">
+
         <nav class="navbar">
 
-            <div class="logo">
+            <a href="#" class="logo">
                 Yar<span>ta</span>
-            </div>
+            </a>
 
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#destinations">Destinations</a></li>
-                <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
 
-            <a href="#contact" class="book-btn">Book Now</a>
+            <a href="#contact" class="nav-button">
+                Book Your Trip
+            </a>
 
         </nav>
+
     </header>
 
 
-    <!-- Home / Hero Section -->
-    <section class="hero" id="home">
+    <!-- ================= HERO ================= -->
 
-        <div class="hero-content">
+    <main>
 
-            <p class="welcome">WELCOME TO YARTA</p>
+        <section class="hero" id="home">
 
-            <h1>
-                Explore The World
-                <br>
-                <span>With Yarta</span>
-            </h1>
+            <!-- Animated background shapes -->
 
-            <p>
-                Discover amazing destinations, experience new cultures
-                and create unforgettable memories.
-            </p>
+            <div class="shape shape-one"></div>
+            <div class="shape shape-two"></div>
+            <div class="shape shape-three"></div>
 
-            <div class="hero-buttons">
-                <a href="#destinations" class="btn">Explore Destinations</a>
-                <a href="#about" class="btn btn-outline">Learn More</a>
-            </div>
+            <div class="hero-content">
 
-        </div>
+                <div class="hero-tag">
+                    ✈️ YOUR JOURNEY STARTS HERE
+                </div>
 
-    </section>
+                <h1>
+                    Discover The
+                    <span>World</span>
+                    <br>
+                    In Your Way
+                </h1>
 
+                <p>
+                    Explore breathtaking destinations, discover new cultures,
+                    and create unforgettable memories with Yarta.
+                </p>
 
-    <!-- Destinations Section -->
-    <section class="destinations" id="destinations">
+                <div class="hero-buttons">
 
-        <div class="section-title">
-            <p>EXPLORE</p>
-            <h2>Popular Destinations</h2>
-            <span>
-                Discover beautiful places around the world.
-            </span>
-        </div>
+                    <a href="#destinations" class="main-button">
+                        Explore Destinations
+                        <span>→</span>
+                    </a>
 
+                    <a href="#about" class="outline-button">
+                        Discover More
+                    </a>
 
-        <div class="destination-container">
+                </div>
 
-            <!-- Paris -->
-            <div class="destination-card">
+                <!-- Hero stats -->
 
-                <img src="images/paris.jpg" alt="Paris">
+                <div class="hero-stats">
 
-                <div class="card-content">
+                    <div>
+                        <strong>120+</strong>
+                        <span>Destinations</span>
+                    </div>
 
-                    <h3>Paris</h3>
+                    <div>
+                        <strong>50K+</strong>
+                        <span>Travelers</span>
+                    </div>
 
-                    <p>
-                        Explore the Eiffel Tower, beautiful streets
-                        and amazing French culture.
-                    </p>
-
-                    <a href="#">Explore →</a>
+                    <div>
+                        <strong>4.9</strong>
+                        <span>Rating</span>
+                    </div>
 
                 </div>
 
             </div>
 
 
-            <!-- Bali -->
-            <div class="destination-card">
+            <!-- Floating travel card -->
 
-                <img src="images/bali.jpg" alt="Bali">
+            <div class="floating-card">
 
-                <div class="card-content">
+                <div class="floating-icon">
+                    🌍
+                </div>
 
-                    <h3>Bali</h3>
+                <div>
+                    <small>Popular Destination</small>
+                    <strong>Bali, Indonesia</strong>
+                </div>
+
+            </div>
+
+
+            <!-- Scroll indicator -->
+
+            <div class="scroll-down">
+                <span></span>
+                Scroll to explore
+            </div>
+
+        </section>
+
+
+        <!-- ================= DESTINATIONS ================= -->
+
+        <section class="destinations" id="destinations">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    EXPLORE THE WORLD
+                </span>
+
+                <h2>
+                    Popular Destinations
+                </h2>
+
+                <p>
+                    Find your next adventure among our most loved
+                    destinations around the world.
+                </p>
+
+            </div>
+
+
+            <div class="destination-grid">
+
+                <!-- Card 1 -->
+
+                <article class="destination-card">
+
+                    <div class="destination-image">
+
+                        <img src="images/paris.jpg" alt="Paris">
+
+                        <span class="country">
+                            France
+                        </span>
+
+                        <span class="heart">
+                            ♡
+                        </span>
+
+                    </div>
+
+                    <div class="destination-content">
+
+                        <div class="rating">
+                            ⭐ 4.9
+                        </div>
+
+                        <h3>Paris</h3>
+
+                        <p>
+                            City of lights, romance and timeless beauty.
+                        </p>
+
+                        <div class="card-footer">
+
+                            <span>
+                                From <b>$499</b>
+                            </span>
+
+                            <a href="#">
+                                Explore →
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Card 2 -->
+
+                <article class="destination-card featured">
+
+                    <div class="destination-image">
+
+                        <img src="images/bali.jpg" alt="Bali">
+
+                        <span class="country">
+                            Indonesia
+                        </span>
+
+                        <span class="heart">
+                            ♡
+                        </span>
+
+                    </div>
+
+                    <div class="destination-content">
+
+                        <div class="rating">
+                            ⭐ 4.9
+                        </div>
+
+                        <h3>Bali</h3>
+
+                        <p>
+                            Tropical paradise filled with beaches and culture.
+                        </p>
+
+                        <div class="card-footer">
+
+                            <span>
+                                From <b>$399</b>
+                            </span>
+
+                            <a href="#">
+                                Explore →
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Card 3 -->
+
+                <article class="destination-card">
+
+                    <div class="destination-image">
+
+                        <img src="images/switzerland.jpg" alt="Switzerland">
+
+                        <span class="country">
+                            Switzerland
+                        </span>
+
+                        <span class="heart">
+                            ♡
+                        </span>
+
+                    </div>
+
+                    <div class="destination-content">
+
+                        <div class="rating">
+                            ⭐ 4.8
+                        </div>
+
+                        <h3>Switzerland</h3>
+
+                        <p>
+                            Majestic mountains and breathtaking landscapes.
+                        </p>
+
+                        <div class="card-footer">
+
+                            <span>
+                                From <b>$599</b>
+                            </span>
+
+                            <a href="#">
+                                Explore →
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SERVICES ================= -->
+
+        <section class="services" id="services">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    WHY CHOOSE YARTA
+                </span>
+
+                <h2>
+                    Travel Made Simple
+                </h2>
+
+                <p>
+                    Everything you need for a smooth and memorable journey.
+                </p>
+
+            </div>
+
+
+            <div class="service-grid">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        ✈️
+                    </div>
+
+                    <h3>
+                        Flight Booking
+                    </h3>
 
                     <p>
-                        Enjoy beautiful beaches, temples and
-                        peaceful tropical landscapes.
+                        Find convenient flights and travel
+                        to your dream destination.
                     </p>
 
-                    <a href="#">Explore →</a>
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        🏨
+                    </div>
+
+                    <h3>
+                        Hotel Booking
+                    </h3>
+
+                    <p>
+                        Discover comfortable hotels at
+                        beautiful locations.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        🗺️
+                    </div>
+
+                    <h3>
+                        Tour Packages
+                    </h3>
+
+                    <p>
+                        Choose exciting tour packages
+                        designed for you.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        🚗
+                    </div>
+
+                    <h3>
+                        Travel Transport
+                    </h3>
+
+                    <p>
+                        Enjoy safe and comfortable
+                        transportation during your trip.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ABOUT ================= -->
+
+        <section class="about" id="about">
+
+            <div class="about-image">
+
+                <img
+                    src="images/switzerland.jpg"
+                    alt="Beautiful travel destination"
+                >
+
+                <div class="experience-card">
+
+                    <strong>10+</strong>
+
+                    <span>
+                        Years of<br>
+                        Travel Experience
+                    </span>
 
                 </div>
 
             </div>
 
 
-            <!-- Switzerland -->
-            <div class="destination-card">
+            <div class="about-content">
 
-                <img src="images/switzerland.jpg" alt="Switzerland">
+                <span class="section-label">
+                    ABOUT YARTA
+                </span>
 
-                <div class="card-content">
+                <h2>
+                    Your Journey.
+                    <span>Our Passion.</span>
+                </h2>
 
-                    <h3>Switzerland</h3>
-
-                    <p>
-                        Discover amazing mountains, lakes and
-                        breathtaking natural beauty.
-                    </p>
-
-                    <a href="#">Explore →</a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- About Section -->
-    <section class="about" id="about">
-
-        <div class="about-image">
-            <img src="images/bali.jpg" alt="Travel">
-        </div>
-
-        <div class="about-content">
-
-            <p>ABOUT YARTA</p>
-
-            <h2>Your Journey Starts Here</h2>
-
-            <p>
-                Yarta is a travel and tourism website designed to
-                help travelers discover amazing destinations and
-                plan memorable journeys.
-            </p>
-
-            <p>
-                From relaxing beaches to beautiful mountains and
-                exciting cities, Yarta makes discovering the world
-                simple and enjoyable.
-            </p>
-
-            <a href="#contact" class="btn">Start Your Journey</a>
-
-        </div>
-
-    </section>
-
-
-    <!-- Services Section -->
-    <section class="services" id="services">
-
-        <div class="section-title">
-
-            <p>OUR SERVICES</p>
-
-            <h2>Travel Made Easy</h2>
-
-        </div>
-
-
-        <div class="service-container">
-
-            <div class="service">
-                <div class="icon">✈️</div>
-                <h3>Flight Booking</h3>
                 <p>
-                    Find comfortable flights for your next adventure.
+                    At Yarta, we believe travel is more than visiting
+                    new places. It's about discovering yourself,
+                    meeting new people and creating stories that
+                    stay with you forever.
                 </p>
-            </div>
 
-
-            <div class="service">
-                <div class="icon">🏨</div>
-                <h3>Hotel Booking</h3>
                 <p>
-                    Find comfortable hotels at beautiful destinations.
+                    From peaceful beaches to exciting cities and
+                    breathtaking mountains, we're here to make
+                    every journey special.
                 </p>
+
+                <a href="#contact" class="main-button">
+                    Start Your Journey →
+                </a>
+
             </div>
 
+        </section>
 
-            <div class="service">
-                <div class="icon">🗺️</div>
-                <h3>Tour Packages</h3>
+
+        <!-- ================= CTA ================= -->
+
+        <section class="cta" id="contact">
+
+            <div class="cta-content">
+
+                <span class="section-label">
+                    READY FOR ADVENTURE?
+                </span>
+
+                <h2>
+                    The World Is Waiting
+                    <br>
+                    <span>For You.</span>
+                </h2>
+
                 <p>
-                    Choose exciting packages for unforgettable trips.
+                    Pack your bags, choose your destination,
+                    and let the adventure begin.
                 </p>
+
+                <a href="mailto:hello@yarta.com" class="main-button">
+                    Plan My Trip →
+                </a>
+
             </div>
 
-        </div>
+        </section>
 
-    </section>
-
-
-    <!-- Contact / CTA -->
-    <section class="contact" id="contact">
-
-        <div>
-
-            <p>START YOUR ADVENTURE</p>
-
-            <h2>Ready To Explore The World?</h2>
-
-            <p>
-                Pack your bags and start your next unforgettable journey.
-            </p>
-
-            <a href="mailto:hello@yarta.com" class="btn">
-                Contact Us
-            </a>
-
-        </div>
-
-    </section>
+    </main>
 
 
-    <!-- Footer -->
+    <!-- ================= FOOTER ================= -->
+
     <footer>
 
-        <div class="footer-content">
+        <div class="footer-container">
 
-            <div class="logo">
-                Yar<span>ta</span>
+            <div class="footer-brand">
+
+                <a href="#" class="logo">
+                    Yar<span>ta</span>
+                </a>
+
+                <p>
+                    Explore the world. Create memories.
+                    Live your journey.
+                </p>
+
             </div>
 
-            <p>
-                Explore the world. Create memories. Live your journey.
-            </p>
 
-            <div class="footer-links">
+            <div class="footer-column">
+
+                <h3>Explore</h3>
+
                 <a href="#home">Home</a>
                 <a href="#destinations">Destinations</a>
+                <a href="#services">Services</a>
                 <a href="#about">About</a>
-                <a href="#contact">Contact</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Contact</h3>
+
+                <p>📧 hello@yarta.com</p>
+                <p>📞 +91 98765 43210</p>
+                <p>📍 India</p>
+
             </div>
 
         </div>
 
-        <hr>
 
-        <p class="copyright">
-            © 2026 Yarta Travel & Tourism. All Rights Reserved.
-        </p>
+        <div class="copyright">
+
+            © 2026 Yarta Travel & Tourism.
+            All Rights Reserved.
+
+        </div>
 
     </footer>
 
 </body>
 </html>
+
+            
